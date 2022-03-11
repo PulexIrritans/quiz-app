@@ -1,0 +1,32 @@
+@import url(/components/avatar/avatar.css);
+
+main {
+    padding: 6rem 1rem 5rem 1rem;
+    justify-content: space-between;
+}
+
+.profile-pic-name {
+    width: 70vw;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20%;
+}
+
+h4 {
+    align-self: flex-start;
+    max-width: 400px;
+}
+
+p {
+    max-width: 400px;
+}
+
+ul {
+    max-width:  400px;
+}
+
+
+
+

@@ -3,6 +3,7 @@
 @import url(/components/QuestionCard/questioncard.css);
 @import url(/components/Button/button.css);
 @import url(/components/Headlines/headlines.css);
+@import url(/components/TagList/taglist.css);
 
 
 * {

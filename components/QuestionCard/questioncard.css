@@ -18,26 +18,25 @@
     align-self: flex-start;
 } */
 
-.question-card-list {
+/* .tag-list {
     margin: 10px 0;
     display: flex;
     justify-content: space-around;
     align-self: stretch;
 }
 
-.question-card-question,
-.question-card-answer {
-    margin: 10px;
-}
-
-.question-card-list-tag {
+.tag {
     background-color: rgb(121, 9, 100);
     color: whitesmoke;
     padding: 0.25em 0.5em;
     border-radius: 7px 3px 7px 3px;
     font-size: 0.7rem;
-}
+} */
 
+.question-card-question,
+.question-card-answer {
+    margin: 10px;
+}
 .question-card-svg {
     width: 2em;
     color: whitesmoke;
