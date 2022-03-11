@@ -12,11 +12,11 @@
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.05);
 }
 
-.question-card-header {
+/* .h2 {
     margin: 0;
     text-transform: uppercase;
     align-self: flex-start;
-}
+} */
 
 .question-card-list {
     margin: 10px 0;
@@ -34,7 +34,7 @@
     background-color: rgb(121, 9, 100);
     color: whitesmoke;
     padding: 0.25em 0.5em;
-    border-radius: 4px;
+    border-radius: 7px 3px 7px 3px;
     font-size: 0.7rem;
 }
 
@@ -44,4 +44,12 @@
     position: absolute;
     top: -1em;
     right: 1em;
+}
+
+.hidden {
+    display: none;
+}
+
+.bookmarked {
+    color:rgb(0, 253, 10);
 }

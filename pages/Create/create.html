@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="../../styles.css" />
+    <link rel="stylesheet" href="create.css">
     <title>Quiz App - Q-Create</title>
   </head>
   <body>
@@ -15,19 +16,21 @@
       <h1 class="quiz-header-h1">Create</h1>
     </header>
     <main>
-     <article>
-      <h2></h2>
-      <p></p>
-      <button></button>
-      <p></p>
-      <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-     </article>
-     
+     <form class="form-container" action="POST">
+         <div class="user-question">
+             <label for="user_qestion">Please type your question below</label>
+         <textarea name="" id="user_question" cols="30" rows="10"></textarea>
+         </div>
+         <div class="question-answer">
+             <label for="question_answer">Please provide the answer below</label>
+         <textarea name="" id="user_answer" cols="30" rows="10"></textarea>
+         </div>
+         <div class="question-tags">
+             <label for="question_tags">Add some tags separated by comma</label>
+         <input type="text" name="" id="question_tags">
+         <button class="button">Submit</button>
+         </div>
+     </form>
     </main>
     <footer class="quiz-footer">
         <ul class="quiz-footer-list">
