@@ -1,0 +1,36 @@
+.quiz-footer {
+    position: absolute;
+    height: 4rem;
+    bottom: 0px;
+    width: 100vw;
+    background-color: rgb(42, 15, 66);
+    color: whitesmoke;
+    /* z-index: 10; */
+}
+
+.quiz-footer-list {
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+.quiz-footer-list-item {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quiz-footer-list-item:hover {
+    cursor: pointer;
+}
+
+.quiz-footer-list-item-svg {
+    width: 2em;
+    color: whitesmoke;
+}
+
+.item-active {
+    background-color: rgb(121, 9, 100);
+}
