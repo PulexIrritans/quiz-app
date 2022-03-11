@@ -52,3 +52,7 @@ main {
     padding: 3rem 1rem 1rem 1rem;
     overflow-y: auto;
 }
+
+.question-card button {
+    align-self: center;
+}

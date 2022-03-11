@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-around;
     align-self: stretch;
+    flex-wrap: wrap;
 }
 
 .tag {
@@ -10,5 +11,4 @@
     color: whitesmoke;
     padding: 0.25em 0.5em;
     border-radius: 7px 3px 7px 3px;
-    font-size: 0.7rem;
 }
