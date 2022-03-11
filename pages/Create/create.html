@@ -16,20 +16,20 @@
       <h1 class="quiz-header-h1">Create</h1>
     </header>
     <main>
-     <form class="form-container" action="POST">
+     <form class="create-form-container" action="POST">
          <div class="user-question">
-             <label for="user_qestion">Please type your question below</label>
-         <textarea name="" id="user_question" cols="30" rows="10"></textarea>
+             <label class="create-form-label" for="user_question">Please type your question</label>
+         <textarea name="user_question" id="user_question" cols="30" rows="10"></textarea>
          </div>
          <div class="question-answer">
-             <label for="question_answer">Please provide the answer below</label>
-         <textarea name="" id="user_answer" cols="30" rows="10"></textarea>
+             <label class="create-form-label" for="question_answer">Please provide the answer</label>
+         <textarea name="question_answer" id="question_answer" cols="30" rows="10"></textarea>
          </div>
          <div class="question-tags">
-             <label for="question_tags">Add some tags separated by comma</label>
-         <input type="text" name="" id="question_tags">
-         <button class="button">Submit</button>
+             <label class="create-form-label" for="question_tags">Question tags separated by comma</label>
+         <input type="text" name="question_tags" id="question_tags">
          </div>
+         <button class="button">Submit</button>
      </form>
     </main>
     <footer class="quiz-footer">
