@@ -10,6 +10,9 @@
   text-transform: uppercase;
   transition: all 0.07s ease;
 }
+.button {
+  align-self: center;
+}
 
 .button:hover,
 .button:active {

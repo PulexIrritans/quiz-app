@@ -29,7 +29,8 @@
     font-size: 1.2rem;
 }
 
-.create-form-container button {
-    align-self: center;
+#user_question:focus,
+#question_answer:focus,
+#question_tags:focus {
+   outline: 1px solid rgb(0, 253, 10);
 }
-

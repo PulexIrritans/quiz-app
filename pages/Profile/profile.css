@@ -1,9 +1,5 @@
 @import url(/components/avatar/avatar.css);
 
-main {
-    /* justify-content: center; */
-}
-
 .profile-info {
     display: flex;
     flex-direction: column;
