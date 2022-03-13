@@ -1,26 +1,20 @@
 @import url(/components/avatar/avatar.css);
 
 main {
-    justify-content: center;
-    gap: 8%
+    /* justify-content: center; */
 }
 
 .profile-info {
     display: flex;
     flex-direction: column;
-    padding: 20px 20px;
+    padding: 20px;
     background-color: rgba(163, 148, 160, 0.8);
     width: 70vw;
     max-width: 400px;
-    position: relative;
 }
 
-.profile-h2 {
-    align-self: flex-end;
-}
-
-.avatar {
-    position: absolute;
-    top: -50px;
-    left: -25px;
+.profile-info-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
