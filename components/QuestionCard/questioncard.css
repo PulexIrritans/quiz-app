@@ -8,37 +8,15 @@
     flex-direction: column;
     align-items: flex-start;
     color: black;
-    /* border-radius: 4px; */
     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.05);
 }
-
-/* .h2 {
-    margin: 0;
-    text-transform: uppercase;
-    align-self: flex-start;
-} */
-
-/* .tag-list {
-    margin: 10px 0;
-    display: flex;
-    justify-content: space-around;
-    align-self: stretch;
-}
-
-.tag {
-    background-color: rgb(121, 9, 100);
-    color: whitesmoke;
-    padding: 0.25em 0.5em;
-    border-radius: 7px 3px 7px 3px;
-    font-size: 0.7rem;
-} */
 
 .question-card-question,
 .question-card-answer {
     margin: 10px;
 }
 .question-card-svg {
-    width: 2em;
+    width: 2rem;
     color: whitesmoke;
     position: absolute;
     top: -1em;

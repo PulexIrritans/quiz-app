@@ -21,13 +21,14 @@
     align-items: center;
 }
 
-.quiz-footer-list-item:hover {
-    cursor: pointer;
+.quiz-footer-list-item-svg {
+    color: whitesmoke;
+    padding: 0 8vw;
+    height: 2rem;
 }
 
-.quiz-footer-list-item-svg {
-    width: 2em;
-    color: whitesmoke;
+.quiz-footer-list-item-svg:hover {
+    cursor: pointer;
 }
 
 .item-active {

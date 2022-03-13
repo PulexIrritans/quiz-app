@@ -18,23 +18,6 @@ html, body {
     padding: 0;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-p {
-    line-height: 1rem;
-}
-
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-/* Special styles */
-
 body {
     display: flex;
     flex-direction: column;
@@ -52,6 +35,23 @@ main {
     padding: 3rem 1rem 1rem 1rem;
     overflow-y: auto;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+p {
+    line-height: 1rem;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Special styles */
 
 .question-card button {
     align-self: center;

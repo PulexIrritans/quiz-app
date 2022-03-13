@@ -1,19 +1,9 @@
 @import url(/components/avatar/avatar.css);
 
 main {
-    padding: 6rem 2rem 5rem 2rem;
     justify-content: center;
-    gap: 10%
+    gap: 8%
 }
-
-/* .profile-pic-name {
-    padding: 0 10px;
-    width: 70vw;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-} */
 
 .profile-info {
     display: flex;
@@ -25,7 +15,7 @@ main {
     position: relative;
 }
 
-.profile-pic {
+.profile-h2 {
     align-self: flex-end;
 }
 
@@ -34,7 +24,3 @@ main {
     top: -50px;
     left: -25px;
 }
-
-
-
-

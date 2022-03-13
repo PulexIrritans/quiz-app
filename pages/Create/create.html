@@ -17,15 +17,15 @@
     </header>
     <main>
      <form class="create-form-container" action="POST">
-         <div class="user-question">
-             <label class="create-form-label" for="user_question">Please type your question</label>
-         <textarea name="user_question" id="user_question" cols="30" rows="10"></textarea>
+         <div class="input-container user-question">
+             <label class="create-form-label" for="user_question">Please type your question*</label>
+         <textarea name="user_question" id="user_question" cols="30" rows="10" required></textarea>
          </div>
-         <div class="question-answer">
-             <label class="create-form-label" for="question_answer">Please provide the answer</label>
-         <textarea name="question_answer" id="question_answer" cols="30" rows="10"></textarea>
+         <div class="input-container question-answer">
+             <label class="create-form-label" for="question_answer">Please provide the answer*</label>
+         <textarea name="question_answer" id="question_answer" cols="30" rows="10" required></textarea>
          </div>
-         <div class="question-tags">
+         <div class="input-container question-tags">
              <label class="create-form-label" for="question_tags">Question tags separated by comma</label>
          <input type="text" name="question_tags" id="question_tags">
          </div>
