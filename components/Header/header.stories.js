@@ -1,10 +1,9 @@
 import "./header.css";
+import header from "./header.html";
 
 export default {
   title: "Components/Header",
 };
 
-export const Default = () => `<header class="quiz-header">
-<h1 class="quiz-header-h1">Quiz-App</h1>
-</header>`;
+export const Basic = () => header;
 

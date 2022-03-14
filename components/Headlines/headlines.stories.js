@@ -1,8 +1,10 @@
 import "./headlines.css";
+import h1 from "./h1.html";
+import h2 from "./h2.html";
 
 export default {
   title: "Components/Headlines",
 };
 
-export const H1 = () => `<h1 class="quiz-header-h1">Quiz-App</h1>`;
-export const H2 = () => '<h2 class="h2">Question</h2>'
+export const H1 = () => h1
+export const H2 = () => h2

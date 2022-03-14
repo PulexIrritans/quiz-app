@@ -1,14 +1,8 @@
 import "./taglist.css";
+import taglist from "./taglist.html";
 
 export default {
-  title: "Components/taglist",
+  title: "Components/Taglist",
 };
 
-export const Default = () => 
-
-`<ul class="tag-list">
-  <li class="tag">tagtag 1</li>
-  <li class="tag">tag 2</li>
-  <li class="tag">tagtagtag 3</li>
-  <li class="tag">tag 4</li>
-</ul>`
+export const Default = () => taglist
