@@ -1,5 +1,4 @@
 import "./create.css";
-import "../../styles.css";
 
 import create from "./create.html";
 
