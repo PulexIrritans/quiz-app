@@ -1,4 +1,4 @@
-// Global variables
+// Global variables and constants
 
 const questionCardButtonElements = document.querySelectorAll('button[data-js="toggle-answer"]');
 const bookmarkElement = document.querySelectorAll('.question-card-svg path');
@@ -16,9 +16,8 @@ function toggleAnswer(event) {
 
 function toggleBookmark(event) {
     event.target.parentElement.classList.toggle('bookmarked');
+    // event.target.parentElement.parentElement.classList.toggle('bookmarked-question');
 };
-
-
 
 // Event Listeners
 
