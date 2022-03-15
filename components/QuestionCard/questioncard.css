@@ -19,6 +19,7 @@
 .question-card-svg {
     width: 2rem;
     color: whitesmoke;
+    fill: rgb(245, 245, 245, 0);
     position: absolute;
     top: -1em;
     right: 1em;

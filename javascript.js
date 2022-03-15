@@ -1,14 +1,12 @@
 // Global variables
 
-const questionCardButtonElements = document.querySelectorAll("button[data-js='toggle-answer']");
-
+const questionCardButtonElements = document.querySelectorAll('button[data-js="toggle-answer"]');
+const bookmarkElement = document.querySelectorAll('.question-card-svg path');
 
 // Functions
 
 function toggleAnswer(event) {
     event.target.nextElementSibling.classList.toggle('hidden');
-    console.log(event.target.textContent);
-
     if (event.target.textContent==='Show answer') {
         event.target.textContent='Hide answer'
     } else {
@@ -16,7 +14,13 @@ function toggleAnswer(event) {
         }
     };
 
+function toggleBookmark(event) {
+    event.target.parentElement.classList.toggle('bookmarked');
+};
+
+
 
 // Event Listeners
 
 questionCardButtonElements.forEach((element) => element.addEventListener('click', toggleAnswer));
+bookmarkElement.forEach((element) => element.addEventListener('click', toggleBookmark));
