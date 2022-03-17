@@ -1,16 +1,16 @@
 .tag-list {
-    margin: 10px 0;
-    display: flex;
-    justify-content: flex-start;
-    align-self: stretch;
-    flex-wrap: wrap;
-    gap: 10px;
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-self: stretch;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .tag {
-    background-color: rgb(121, 9, 100);
-    color: whitesmoke;
-    padding: 0.25em 0.5em;
-    margin: 0.1em 0;
-    border-radius: 7px 3px 7px 3px;
+  background-color: rgba(121, 9, 100, 100%);
+  color: whitesmoke;
+  padding: 0.25em 0.5em;
+  margin: 0.1em 0;
+  border-radius: 7px 3px;
 }

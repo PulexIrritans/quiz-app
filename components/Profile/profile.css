@@ -1,13 +1,13 @@
 .profile-info {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: rgba(163, 148, 160, 0.8);
-    max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: rgba(163, 148, 160, 80%);
+  max-width: 400px;
 }
 
 .profile-info-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

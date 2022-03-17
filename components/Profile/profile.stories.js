@@ -1,9 +1,8 @@
-import "./profile.css";
-import profile from "./profile.html";
-
+import './profile.css';
+import profile from './profile.html';
 
 export default {
-  title: "Components/Profile",
+  title: 'Components/Profile',
 };
 
 export const Basic = () => profile;

@@ -1,9 +1,8 @@
-import "./form.css";
-import form from "./form.html";
-
+import './form.css';
+import form from './form.html';
 
 export default {
-  title: "Components/Form",
+  title: 'Components/Form',
 };
 
-export const Basic = () => form
+export const Basic = () => form;

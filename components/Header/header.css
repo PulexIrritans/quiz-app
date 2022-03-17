@@ -1,8 +1,8 @@
 .quiz-header {
-    width: 100vw;
-    height: 4rem;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  width: 100vw;
+  height: 4rem;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

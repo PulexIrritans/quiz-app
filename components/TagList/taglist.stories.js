@@ -1,8 +1,8 @@
-import "./taglist.css";
-import taglist from "./taglist.html";
+import './taglist.css';
+import taglist from './taglist.html';
 
 export default {
-  title: "Components/Taglist",
+  title: 'Components/Taglist',
 };
 
-export const Default = () => taglist
+export const Default = () => taglist;

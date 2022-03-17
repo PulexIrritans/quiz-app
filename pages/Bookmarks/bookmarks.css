@@ -1,10 +1,9 @@
-@import url(/styles.css);
+@import '/styles.css';
 
 .question-card {
-    display: none;
+  display: none;
 }
 
 .bookmarked-question {
-    display: none;  /* This should be "block" later. */
+  display: none; /* This should be "block" later. */
 }
-

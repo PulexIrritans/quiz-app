@@ -1,9 +1,8 @@
-import "./header.css";
-import header from "./header.html";
+import './header.css';
+import header from './header.html';
 
 export default {
-  title: "Components/Header",
+  title: 'Components/Header',
 };
 
 export const Basic = () => header;
-

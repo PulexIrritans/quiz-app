@@ -1,2 +1,2 @@
-@import url(/styles.css);
-@import url(../../components/Form/form.css);
+@import '/styles.css';
+@import '../../components/Form/form.css';

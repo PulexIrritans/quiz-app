@@ -1,58 +1,62 @@
-@import url(/components/Header/header.css);
-@import url(/components/Footer/footer.css);
-@import url(/components/QuestionCard/questioncard.css);
-@import url(/components/Button/button.css);
-@import url(/components/Headlines/headlines.css);
-@import url(/components/TagList/taglist.css);
-
+@import '/components/Header/header.css';
+@import '/components/Footer/footer.css';
+@import '/components/QuestionCard/questioncard.css';
+@import '/components/Button/button.css';
+@import '/components/Headlines/headlines.css';
+@import '/components/TagList/taglist.css';
 
 * {
-    box-sizing: border-box;
-    font-family: 'Gaegu', cursive;
-    font-size: 1.1rem;
+  box-sizing: border-box;
+  font-family: Gaegu, cursive;
+  font-size: 1.1rem;
 }
 
 *:focus {
-    outline: none;    
-    }
-    
+  outline: none;
+}
 
-html, body {
-    height: 100%;
-    background: linear-gradient(150deg, rgba(2,0,36,1) 0%, rgba(121,9,100,1) 33%, rgba(0,212,255,1) 100%);
-    margin: 0;
-    padding: 0;
+html,
+body {
+  height: 100%;
+  background: linear-gradient(
+    150deg,
+    rgba(2, 0, 36, 100%) 0%,
+    rgba(121, 9, 100, 100%) 33%,
+    rgba(0, 212, 255, 100%) 100%
+  );
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 main {
-    display: flex;
-    flex-grow: 1;
-    width: 100vw;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 3rem 1rem 1rem 1rem;
-    overflow-y: auto;
+  display: flex;
+  flex-grow: 1;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 3rem 1rem 1rem;
+  overflow-y: auto;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 p {
-    line-height: 1rem;
+  line-height: 1rem;
 }
 
 ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
