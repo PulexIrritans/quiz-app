@@ -1,4 +1,6 @@
 {
   "*": "prettier --ignore-unknown --write",
-  "*.html": ["htmlhint"]
+  "*.html": ["htmlhint"],
+  "*.css": ["stylelint"],
+  "*.js": ["eslint"]
 }
