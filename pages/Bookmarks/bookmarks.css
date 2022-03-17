@@ -5,5 +5,6 @@
 }
 
 .bookmarked-question {
-    display: flex;
+    display: none;  /* This should be "block" later. */
 }
+

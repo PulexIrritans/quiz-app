@@ -16,7 +16,7 @@ function toggleAnswer(event) {
 
 function toggleBookmark(event) {
     event.target.parentElement.classList.toggle('bookmarked');
-    // event.target.parentElement.parentElement.classList.toggle('bookmarked-question');
+    // event.target.parentElement.parentElement.classList.toggle('bookmarked-question'); ---> Just tried here to give the whole card item a class when bookmarked
 };
 
 // Event Listeners
