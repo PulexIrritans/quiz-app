@@ -24,10 +24,6 @@
   right: 1em;
 }
 
-.hidden {
-  display: none;
-}
-
 .bookmarked {
   color: rgba(0, 253, 10, 100%);
   fill: rgba(0, 253, 10, 100%);
