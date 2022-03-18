@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="create.css" />
+    <script src="../../javascript.js" defer></script>
     <title>Quiz App - Q-Create</title>
   </head>
   <body>
@@ -21,9 +22,11 @@
       <form class="create-form-container" action="POST">
         <div class="input-container user-question">
           <label class="create-form-label" for="user_question"
-            >Please fill in your question*</label
-          >
+            >Please fill in your question*:
+            <span class="create-form-counter"></span
+          ></label>
           <textarea
+            class="create-form-input"
             name="user_question"
             id="user_question"
             cols="30"
@@ -33,9 +36,11 @@
         </div>
         <div class="input-container question-answer">
           <label class="create-form-label" for="question_answer"
-            >Please provide the answer*</label
-          >
+            >Please provide the answer*:
+            <span class="create-form-counter"></span
+          ></label>
           <textarea
+            class="create-form-input"
             name="question_answer"
             id="question_answer"
             cols="30"
@@ -45,9 +50,14 @@
         </div>
         <div class="input-container question-tags">
           <label class="create-form-label" for="question_tags"
-            >Question tags separated by comma</label
-          >
-          <input type="text" name="question_tags" id="question_tags" />
+            >Tags, separated by comma: <span class="create-form-counter"></span
+          ></label>
+          <input
+            class="create-form-input"
+            type="text"
+            name="question_tags"
+            id="question_tags"
+          />
         </div>
         <button class="button">Submit</button>
       </form>

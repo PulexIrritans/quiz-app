@@ -4,6 +4,7 @@ const questionCardButtonElements = document.querySelectorAll(
   'button[data-js="toggle-answer"]'
 );
 const bookmarkElement = document.querySelectorAll('.question-card-svg path');
+const inputContainerElement = document.querySelectorAll('.input-container');
 
 // Functions
 
@@ -29,3 +30,15 @@ questionCardButtonElements.forEach(element =>
 bookmarkElement.forEach(element =>
   element.addEventListener('click', toggleBookmark)
 );
+
+// Event Listener and function for input count
+inputContainerElement.forEach(element => {
+  const inputFieldElement = element.querySelector('.create-form-input');
+  const createFormCounterElement = element.querySelector(
+    '.create-form-counter'
+  );
+
+  inputFieldElement.addEventListener('input', () => {
+    createFormCounterElement.textContent = inputFieldElement.value.length;
+  });
+});
