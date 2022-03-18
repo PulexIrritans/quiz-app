@@ -3,10 +3,10 @@
 const questionCardButtonElements = document.querySelectorAll(
   'button[data-js="toggle-answer"]'
 );
-const bookmarkElement = document.querySelectorAll('.question-card-svg path');
+// const bookmarkElement = document.querySelectorAll('.question-card-svg path');
 const inputContainerElement = document.querySelectorAll('.input-container');
 const footerMenuElements = document.querySelectorAll('.quiz-footer-list-item');
-const questionCardElement = document.querySelectorAll('.question-card')
+const questionCardElement = document.querySelectorAll('.question-card');
 
 
 // Functions
@@ -20,23 +20,28 @@ const questionCardElement = document.querySelectorAll('.question-card')
 //   }
 // }
 
-function toggleBookmark(event) {
-  event.target.parentElement.classList.toggle('bookmarked');
-  // event.target.parentElement.parentElement.classList.toggle('bookmarked-question'); ---> Just tried here to give the whole card item a class when bookmarked
-}
+// function toggleBookmark(event) {
+//   event.target.parentElement.classList.toggle('bookmarked');
+//   event.target.parentElement.parentElement.classList.toggle('bookmarked-question'); ---> Just tried here to give the whole card item a class when bookmarked
+// }
 
 
 function changePageContent(event) {
+    
     const allSectionElements = document.querySelectorAll('section')
     const sectionIndexElement = document.querySelector('.index');
     const sectionBookmarksElement = document.querySelector('.bookmarks');
     const sectionCreateElement = document.querySelector('.create');
     const sectionProfileElement = document.querySelector('.profile');
+
+    footerMenuElements.forEach(element => {
+    element.classList.remove('item-active')})
+
     
     allSectionElements.forEach(element => {
     element.classList.add('hidden')})
     const eventTargetAttribut = event.target.getAttribute("data-js");
-    
+
     if (eventTargetAttribut==='home') {
         sectionIndexElement.classList.remove('hidden') 
     }
@@ -71,16 +76,16 @@ inputContainerElement.forEach(element => {
 // );
 
 // Event Listener Bookmark
-bookmarkElement.forEach(element =>
-  element.addEventListener('click', toggleBookmark)
-);
+// bookmarkElement.forEach(element =>
+//   element.addEventListener('click', toggleBookmark)
+// );
 
 // Event Listener for menu
-footerMenuElements.forEach(element => 
-    element.addEventListener('click', changePageContent)
-    );
+footerMenuElements.forEach(element => {
+    element.addEventListener('click', changePageContent);
+});
 
-// Event Listener Question Card
+// Event Listener and function for question card button and bookmark
 questionCardElement.forEach(element => {
     const buttonElement = element.querySelector('button')
     buttonElement.addEventListener('click', () => {
@@ -89,5 +94,10 @@ questionCardElement.forEach(element => {
             buttonElement.textContent = 'Hide answer'
         } else {buttonElement.textContent = 'Show answer'}
         }
-    )
+    )    
+    const bookmarkElement = element.querySelector('path')
+    const bookmarkSvgElement = element.querySelector('.question-card-svg')
+    bookmarkElement.addEventListener('click', () => {
+    bookmarkSvgElement.classList.toggle('bookmarked')
+    })
 })
