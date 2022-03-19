@@ -6,6 +6,7 @@ const questionCardButtonElements = document.querySelectorAll(
 // const bookmarkElement = document.querySelectorAll('.question-card-svg path');
 const inputContainerElement = document.querySelectorAll('.input-container');
 const footerMenuElements = document.querySelectorAll('.quiz-footer-list-item');
+console.log(footerMenuElements)
 const questionCardElement = document.querySelectorAll('.question-card');
 
 
@@ -26,6 +27,7 @@ const questionCardElement = document.querySelectorAll('.question-card');
 // }
 
 
+// Function that adjust page content depending on clicked list menu item
 function changePageContent(event) {
     
     const allSectionElements = document.querySelectorAll('section')
@@ -33,26 +35,37 @@ function changePageContent(event) {
     const sectionBookmarksElement = document.querySelector('.bookmarks');
     const sectionCreateElement = document.querySelector('.create');
     const sectionProfileElement = document.querySelector('.profile');
-
+    const pageHeaderElement = document.querySelector('.quiz-header-h1');
+    
+    //Changes highlighting for active menu element
     footerMenuElements.forEach(element => {
     element.classList.remove('item-active')})
+    event.target.classList.add('item-active') 
 
-    
+    //Changes visible section and header depending on clicked menu element
     allSectionElements.forEach(element => {
     element.classList.add('hidden')})
     const eventTargetAttribut = event.target.getAttribute("data-js");
 
     if (eventTargetAttribut==='home') {
-        sectionIndexElement.classList.remove('hidden') 
+        sectionIndexElement.classList.remove('hidden')
+        pageHeaderElement.textContent = 'Quizzly'
+
     }
     if (eventTargetAttribut==='bookmarks') {
         sectionBookmarksElement.classList.remove('hidden');
+        pageHeaderElement.textContent = 'Bookmarks'
+
     } 
     if (eventTargetAttribut==='create') {
-        sectionCreateElement.classList.remove('hidden');  
+        sectionCreateElement.classList.remove('hidden');
+        pageHeaderElement.textContent = 'Create'
+  
     } 
     if (eventTargetAttribut==='profile') {
         sectionProfileElement.classList.remove('hidden');
+        pageHeaderElement.textContent = 'Profile'
+
     }
 }
 
@@ -90,9 +103,10 @@ questionCardElement.forEach(element => {
     const buttonElement = element.querySelector('button')
     buttonElement.addEventListener('click', () => {
         element.querySelector('.question-card-answer').classList.toggle('hidden');
-        if (buttonElement.textContent==='Show answer') {
-            buttonElement.textContent = 'Hide answer'
-        } else {buttonElement.textContent = 'Show answer'}
+        console.log(textContent)
+        if (event.target.textContent==='Show answer') {
+        target.textContent = 'Hide answer'
+        } else {target.textContent = 'Show answer'}
         }
     )    
     const bookmarkElement = element.querySelector('path')
