@@ -19,7 +19,8 @@
       <h1 class="quiz-header-h1">Quizzly</h1>
     </header>
     <main>
-      <article class="question-card">
+      <section class="index">
+        <article class="question-card">
         <svg
           class="question-card-svg"
           xmlns="http://www.w3.org/2000/svg"
@@ -232,12 +233,185 @@
           <li class="tag">tagtagtag 7</li>
         </ul>
       </article>
+      </section>
+      <section class="bookmarks hidden">
+        <article class="question-card bookmarked-question">
+          <svg
+            class="question-card-svg bookmarked"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+            />
+          </svg>
+          <h2 class="h2">Question</h2>
+          <p class="question-card-question">
+            This is an example question? Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Ipsum aa veniam provident incidunt non fugit
+            repudiandae iure, a molestiae, voluptate consequuntur expedita
+          </p>
+          <button class="button" type="button" data-js="toggle-answer">
+            Hide answer
+          </button>
+          <p class="question-card-answer">
+            This is the answer to the example question.
+          </p>
+          <ul class="tag-list">
+            <li class="tag">tagtag 1</li>
+            <li class="tag">tag 2</li>
+            <li class="tag">tagtagtag 3</li>
+            <li class="tag">tag 4</li>
+          </ul>
+        </article>
+        <article class="question-card bookmarked-question">
+          <svg
+            class="question-card-svg bookmarked"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+            />
+          </svg>
+          <h2 class="h2">Question</h2>
+          <p class="question-card-question">
+            This is an example question? Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Ipsum aa veniam provident incidunt non fugit
+            repudiandae iure, a molestiae, voluptate consequuntur expedita
+          </p>
+          <button class="button" type="button" data-js="toggle-answer">
+            Show answer
+          </button>
+          <p class="question-card-answer hidden">
+            This is the answer to the example question.
+          </p>
+          <ul class="tag-list">
+            <li class="tag">tagtag 1</li>
+            <li class="tag">tag 2</li>
+            <li class="tag">tagtagtag 3</li>
+            <li class="tag">tag 4</li>
+          </ul>
+        </article>
+        <article class="question-card bookmarked-question">
+          <svg
+            class="question-card-svg bookmarked"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
+            />
+          </svg>
+          <h2 class="h2">Question</h2>
+          <p class="question-card-question">
+            This is an example question? Lorem, ipsum dolor sit amet consectetur
+            adipisicing elit. Ipsum aa veniam provident incidunt non fugit
+            repudiandae iure, a molestiae, voluptate consequuntur expedita
+          </p>
+          <button class="button" type="button" data-js="toggle-answer">
+            Hide answer
+          </button>
+          <p class="question-card-answer">
+            This is the answer to the example question.
+          </p>
+          <ul class="tag-list hidden">
+            <!-- <li class="tag">tagtag 1</li>
+                <li class="tag">tag 2</li>
+                <li class="tag">tagtagtag 3</li>
+                <li class="tag">tag 4</li> -->
+          </ul>
+        </article>
+      </section>
+      <section class="create hidden">
+        <form class="create-form-container" action="POST">
+          <div class="input-container user-question">
+            <label class="create-form-label" for="user_question"
+              >Please fill in your question*:
+              <span class="create-form-counter"></span
+            ></label>
+            <textarea
+              class="create-form-input"
+              name="user_question"
+              id="user_question"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <div class="input-container question-answer">
+            <label class="create-form-label" for="question_answer"
+              >Please provide the answer*:
+              <span class="create-form-counter"></span
+            ></label>
+            <textarea
+              class="create-form-input"
+              name="question_answer"
+              id="question_answer"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <div class="input-container question-tags">
+            <label class="create-form-label" for="question_tags"
+              >Tags, separated by comma: <span class="create-form-counter"></span
+            ></label>
+            <input
+              class="create-form-input"
+              type="text"
+              name="question_tags"
+              id="question_tags"
+            />
+          </div>
+          <button class="button">Submit</button>
+        </form>
+      </section>
+      <section class="profile hidden">
+        <div class="profile-info">
+          <div class="profile-info-header">
+            <img class="avatar" src="/assets/Antje.png" alt="Antje" />
+            <h2 class="h2 profile-h2">Antje</h2>
+          </div>
+          <p>
+            This is a text about Antje. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Necessitatibus nobis minus tenetur quidem,
+            provident, pariatur nemo quod suscipit blanditiis quis, voluptas id
+            eligendi illum accusamus est explicabo. Incidunt, libero iusto.
+          </p>
+          <h3>Special forces</h3>
+          <ul class="tag-list">
+            <li class="tag">tag1</li>
+            <li class="tag">tagtagtag2</li>
+            <li class="tag">tagtag3</li>
+            <li class="tag">tagtag4</li>
+          </ul>
+        </div>
+        <button class="button">Logout</button>
+      </section> 
     </main>
     <footer class="quiz-footer">
       <ul class="quiz-footer-list">
-        <li class="quiz-footer-list-item item-active">
-          <a class="quiz-footer-list-item-link" href="/index.html"
-            ><svg
+        <li class="quiz-footer-list-item item-active" data-js="home">
+          <svg 
               alt="Home"
               class="quiz-footer-list-item-svg"
               xmlns="http://www.w3.org/2000/svg"
@@ -245,37 +419,31 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
+              stroke-width="2">
+              <path 
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-              /></svg
-          ></a>
+              /></svg>
         </li>
-        <li class="quiz-footer-list-item">
-          <a href="/pages/Bookmarks/bookmarks.html"
-            ><svg
-              alt="Bookmark"
+        <li class="quiz-footer-list-item" data-js="bookmarks">
+          <svg 
+              alt="Bookmarks"
               class="quiz-footer-list-item-svg"
               xmlns="http://www.w3.org/2000/svg"
               class="h-6 w-6"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="2"
-            >
+              stroke-width="2">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"
-              /></svg
-          ></a>
+              /></svg>
         </li>
-        <li class="quiz-footer-list-item">
-          <a href="/pages/Create/create.html"
-            ><svg
+        <li class="quiz-footer-list-item" data-js="create">
+         <svg 
               alt="Create"
               class="quiz-footer-list-item-svg"
               xmlns="http://www.w3.org/2000/svg"
@@ -283,18 +451,14 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
+              stroke-width="2">
+              <path 
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-              /></svg
-          ></a>
+                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
         </li>
-        <li class="quiz-footer-list-item">
-          <a href="/pages/Profilepage/profilepage.html"
-            ><svg
+        <li class="quiz-footer-list-item" data-js="profile">
+          <svg 
               alt="Profile"
               class="quiz-footer-list-item-svg"
               xmlns="http://www.w3.org/2000/svg"
@@ -302,14 +466,11 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              stroke-width="2"
-            >
+              stroke-width="2">
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-              /></svg
-          ></a>
+                d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </li>
       </ul>
     </footer>

@@ -4,6 +4,10 @@
 @import '/components/Button/button.css';
 @import '/components/Headlines/headlines.css';
 @import '/components/TagList/taglist.css';
+@import '/components/Form/form.css';
+@import '/components/avatar/avatar.css';
+@import '/components/Profile/profile.css';
+
 
 * {
   box-sizing: border-box;
@@ -40,10 +44,16 @@ main {
   flex-grow: 1;
   width: 100vw;
   flex-direction: column;
+  
+  overflow-y: auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 30px;
   padding: 3rem 1rem 1rem;
-  overflow-y: auto;
 }
 
 a {
@@ -59,4 +69,8 @@ ul {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.hidden {
+  display: none;
 }
