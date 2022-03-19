@@ -20,6 +20,9 @@ function toggleAnswer(event) {
 function toggleBookmark(event) {
   event.target.parentElement.classList.toggle('bookmarked');
   event.target.parentElement.parentElement.classList.toggle('bookmarked-question');  
+  const activeFooterMenuElement = Array.from(footerMenuElements).find(element => element.classList.contains('item-active'));
+  const activeFooterMenuElementAttribut = activeFooterMenuElement.getAttribute('data-js');
+  if (activeFooterMenuElementAttribut==='bookmarks') event.target.parentElement.parentElement.classList.add('hidden');
 }
 
 
@@ -42,7 +45,7 @@ function changePageContent(event) {
     //// including display of only bookmarked question cards in bookmarks section
     allSectionElements.forEach(element => {
     element.classList.add('hidden')})
-    const eventTargetAttribut = event.target.getAttribute("data-js");
+    const eventTargetAttribut = event.target.getAttribute('data-js');
 
     if (eventTargetAttribut==='home') {
         sectionIndexElement.classList.remove('hidden');
@@ -104,7 +107,3 @@ bookmarkElements.forEach(element =>
 footerMenuElements.forEach(item => {
     item.addEventListener('click', changePageContent);
 });
-
-
-
-
