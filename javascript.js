@@ -19,6 +19,7 @@ function toggleAnswer(event) {
 
 function toggleBookmark(event) {
   event.target.parentElement.classList.toggle('bookmarked');
+  event.target.parentElement.parentElement.classList.toggle('bookmarked-question');  
 }
 
 
@@ -37,29 +38,38 @@ function changePageContent(event) {
     element.classList.remove('item-active')})
     event.target.classList.add('item-active') 
 
-    //// Changes visible section and header depending on clicked menu element
+    //// Changes visible section and header depending on clicked menu element,
+    //// including display of only bookmarked question cards in bookmarks section
     allSectionElements.forEach(element => {
     element.classList.add('hidden')})
     const eventTargetAttribut = event.target.getAttribute("data-js");
 
     if (eventTargetAttribut==='home') {
-        sectionIndexElement.classList.remove('hidden')
-        pageHeaderElement.textContent = 'Quizzly'
-
+        sectionIndexElement.classList.remove('hidden');
+        pageHeaderElement.textContent = 'Quizzly';
+        sectionIndexElement.querySelectorAll('.question-card').forEach(element => {
+            element.classList.remove('hidden');
+        })
     }
     if (eventTargetAttribut==='bookmarks') {
-        sectionBookmarksElement.classList.remove('hidden');
-        pageHeaderElement.textContent = 'Bookmarks'
+        sectionIndexElement.classList.remove('hidden');
+        pageHeaderElement.textContent = 'Bookmarks';
+        sectionIndexElement.querySelectorAll('.question-card').forEach(element => {
+            element.classList.add('hidden');
+            if (element.classList.contains('bookmarked-question')) {
+                element.classList.remove('hidden');
+            }
+        })
 
     } 
     if (eventTargetAttribut==='create') {
         sectionCreateElement.classList.remove('hidden');
-        pageHeaderElement.textContent = 'Create'
+        pageHeaderElement.textContent = 'Create';
   
     } 
     if (eventTargetAttribut==='profile') {
         sectionProfileElement.classList.remove('hidden');
-        pageHeaderElement.textContent = 'Profile'
+        pageHeaderElement.textContent = 'Profile';
 
     }
 }
