@@ -12,7 +12,7 @@
 * {
   box-sizing: border-box;
   font-family: Gaegu, cursive;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
 }
 
 *:focus {
@@ -22,12 +22,21 @@
 html,
 body {
   height: 100%;
-  background: linear-gradient(
+  /* background: linear-gradient(
     150deg,
     rgba(2, 0, 36, 100%) 0%,
     rgba(121, 9, 100, 100%) 33%,
     rgba(0, 212, 255, 100%) 100%
-  );
+  ); */
+
+  /* background: linear-gradient(347deg, rgba(2,0,36,1) 35%, rgba(4,72,156,1) 69%, rgba(207,0,255,1) 100%); */
+  /* background: linear-gradient(0deg, rgba(2,0,36,1) 35%, rgba(4,72,156,1) 69%, rgba(207,0,255,1) 100%); */
+  /* background: linear-gradient(0deg, rgba(2,0,36,1) 28%, rgba(4,72,156,1) 59%, rgba(207,0,255,1) 100%);  */
+  background-image: url(/assets/hacker-g56603597a_1920.jpg);
+  background-repeat: no-repeat;
+  background-position: 0% 10%;
+
+  /* background-size: cover; */
   margin: 0;
   padding: 0;
 }

@@ -3,6 +3,7 @@
   flex-direction: column;
   max-width: 400px;
   gap: 10px;
+  color: whitesmoke;
 }
 
 .create-form-label {
@@ -10,7 +11,7 @@
 }
 
 .input-container {
-  background-color: rgba(163, 148, 160, 80%);
+  background-color: rgb(2, 69, 87, 0.8);
   padding: 1rem;
 }
 

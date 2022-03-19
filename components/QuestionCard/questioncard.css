@@ -2,11 +2,11 @@
   position: relative;
   max-width: 400px;
   padding: 7px;
-  background-color: rgba(163, 148, 160, 80%);
+  background-color: rgb(2, 69, 87, 0.8);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  color: black;
+  color: whitesmoke;
   box-shadow: 0 0 16px 0 rgba(0, 0, 0, 5%);
 }
 
@@ -31,6 +31,6 @@
 }
 
 .bookmarked {
-  color: rgba(0, 253, 10, 100%);
-  fill: rgba(0, 253, 10, 100%);
+  color: whitesmoke;
+  fill: whitesmoke;
 }

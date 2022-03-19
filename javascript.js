@@ -91,8 +91,8 @@ bookmarkElements.forEach(element =>
 );
 
 /// Event Listener for Menu items
-footerMenuElements.forEach(element => {
-    element.addEventListener('click', changePageContent);
+footerMenuElements.forEach(item => {
+    item.addEventListener('click', changePageContent);
 });
 
 
