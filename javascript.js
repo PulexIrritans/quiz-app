@@ -1,80 +1,10 @@
 // Global variables and constants
 
-// const questionCardButtonElements = document.querySelectorAll(
-//   'button[data-js="toggle-answer"]'
-// );
 const questionCardElements = document.querySelectorAll('.question-card');
-// const bookmarkElements = document.querySelectorAll('.question-card-svg path');
 const inputContainerElements = document.querySelectorAll('.input-container');
 const footerMenuElements = document.querySelectorAll('.quiz-footer-list-item');
 
-
 // Functions
-/// Question card functions
-
-// function toggleAnswer(event) {
-//   event.target.nextElementSibling.classList.toggle('hidden-question');
-//   const buttonText = event.target.textContent.trim();
-//   buttonText === 'Show answer' ? event.target.textContent = 'Hide answer' : event.target.textContent = 'Show answer';
-// }
-
-// function toggleBookmark(event) {
-//   event.target.parentElement.classList.toggle('bookmarked');
-//   event.target.parentElement.parentElement.classList.toggle('bookmarked-question');  
-//   const activeFooterMenuElement = Array.from(footerMenuElements).find(element => element.classList.contains('item-active'));
-//   const activeFooterMenuElementAttribut = activeFooterMenuElement.getAttribute('data-js');
-//   if (activeFooterMenuElementAttribut==='bookmarks') event.target.parentElement.parentElement.classList.add('hidden-question');
-// }
-
-
-/// Function that adjust page content depending on clicked list menu item
-function changePageContent(event) {
-    
-    const allSectionElements = document.querySelectorAll('section')
-    const sectionIndexElement = document.querySelector('.index');
-    const sectionCreateElement = document.querySelector('.create');
-    const sectionProfileElement = document.querySelector('.profile');
-    const pageHeaderElement = document.querySelector('.quiz-header-h1');
-    
-    //// Changes highlighting for active menu element
-    footerMenuElements.forEach(element => {
-    element.classList.remove('item-active')})
-    event.target.classList.add('item-active') 
-
-    //// Changes visible section and header depending on clicked menu element,
-    //// including display of only bookmarked question cards in bookmarks section
-    allSectionElements.forEach(element => {
-    element.classList.add('hidden')})
-    const eventTargetAttribut = event.target.getAttribute('data-js');
-
-    if (eventTargetAttribut==='home') {
-        sectionIndexElement.classList.remove('hidden');
-        pageHeaderElement.textContent = 'Quizzly';
-        sectionIndexElement.querySelectorAll('.question-card').forEach(element => {
-            element.classList.remove('hidden-question');
-        })
-    }
-    if (eventTargetAttribut==='bookmarks') {
-        sectionIndexElement.classList.remove('hidden');
-        pageHeaderElement.textContent = 'Bookmarks';
-        sectionIndexElement.querySelectorAll('.question-card').forEach(element => {
-            element.classList.add('hidden-question');
-            if (element.classList.contains('bookmarked-question')) {
-                element.classList.remove('hidden-question');
-            }
-        })
-    } 
-    if (eventTargetAttribut==='create') {
-        sectionCreateElement.classList.remove('hidden');
-        pageHeaderElement.textContent = 'Create';
-    } 
-    if (eventTargetAttribut==='profile') {
-        sectionProfileElement.classList.remove('hidden');
-        pageHeaderElement.textContent = 'Profile';
-    }
-}
-
-// Event Listener
 
 /// Event Listener and function for input count
 inputContainerElements.forEach(element => {
@@ -90,43 +20,76 @@ inputContainerElements.forEach(element => {
   });
 });
 
-
 /// Event Listeners and functions for question card
 questionCardElements.forEach(element => {
-  const buttonElement = element.querySelector('button[data-js="toggle-answer"]');
+  const buttonElement = element.querySelector(
+    'button[data-js="toggle-answer"]'
+  );
   const answerElement = element.querySelector('.question-card-answer');
   const bookmarkElement = element.querySelector('.question-card-svg');
-  const questioncardElement = element.querySelector('.question-card');
 
- //// Bookmark
+  //// Bookmark
   bookmarkElement.addEventListener('click', () => {
     element.classList.toggle('bookmarked-question');
     bookmarkElement.classList.toggle('bookmarked');
-    const activeFooterMenuElement = Array.from(footerMenuElements).find(element => element.classList.contains('item-active'));
-    const activeFooterMenuElementAttribut = activeFooterMenuElement.getAttribute('data-js');
-    if (activeFooterMenuElementAttribut==='bookmarks') element.classList.add('hidden-question');
-  })
+    const activeFooterMenuElement = Array.from(footerMenuElements).find(
+      element => element.classList.contains('item-active')
+    );
+    const activeFooterMenuElementAttribut =
+      activeFooterMenuElement.getAttribute('data-js');
+    if (activeFooterMenuElementAttribut === 'bookmarks')
+      element.classList.add('hidden-question');
+  });
 
   //// Toggle answer button
   buttonElement.addEventListener('click', () => {
     answerElement.classList.toggle('hidden');
-    buttonElement.textContent.trim() === 'Show answer' ? buttonElement.textContent = 'Hide answer' : buttonElement.textContent = 'Show answer';
-  })
-})
+    buttonElement.textContent.trim() === 'Show answer'
+      ? (buttonElement.textContent = 'Hide answer')
+      : (buttonElement.textContent = 'Show answer');
+  });
+});
 
+/// Event Listener and function for Menu items
+footerMenuElements.forEach((item, index) => {
+  const allSectionElements = document.querySelectorAll('section');
+  const pageHeaderElement = document.querySelector('.quiz-header-h1');
 
+  item.addEventListener('click', () => {
+    footerMenuElements.forEach(element => {
+      element.classList.remove('item-active');
+    });
+    item.classList.add('item-active');
 
-/// Event Listener Show-Hide Answer Button
-// questionCardButtonElements.forEach(element =>
-//   element.addEventListener('click', toggleAnswer)
-// );
+    if (index === 0) pageHeaderElement.textContent = 'Quizzly';
+    if (index === 1) pageHeaderElement.textContent = 'Bookmarks';
+    if (index === 2) pageHeaderElement.textContent = 'Create';
+    if (index === 3) pageHeaderElement.textContent = 'Profile';
 
-/// Event Listener Bookmark
-// bookmarkElements.forEach(element =>
-//   element.addEventListener('click', toggleBookmark)
-// );
+    allSectionElements.forEach(element => {
+      element.classList.add('hidden');
+    });
+    if (index === 2 || index === 3)
+      allSectionElements[index - 1].classList.remove('hidden');
 
-/// Event Listener for Menu items
-footerMenuElements.forEach(item => {
-    item.addEventListener('click', changePageContent);
+    if (index === 0) {
+      allSectionElements[0].classList.remove('hidden');
+      allSectionElements[0]
+        .querySelectorAll('.question-card')
+        .forEach(questioncard => {
+          questioncard.classList.remove('hidden-question');
+        });
+    }
+    if (index === 1) {
+      allSectionElements[0].classList.remove('hidden');
+      allSectionElements[0]
+        .querySelectorAll('.question-card')
+        .forEach(questioncard => {
+          questioncard.classList.add('hidden-question');
+          if (questioncard.classList.contains('bookmarked-question')) {
+            questioncard.classList.remove('hidden-question');
+          }
+        });
+    }
+  });
 });
