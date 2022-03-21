@@ -12,7 +12,7 @@ const footerMenuElements = document.querySelectorAll('.quiz-footer-list-item');
 /// Question card functions
 
 function toggleAnswer(event) {
-  event.target.nextElementSibling.classList.toggle('hidden');
+  event.target.nextElementSibling.classList.toggle('hidden-question');
   const buttonText = event.target.textContent.trim();
   buttonText === 'Show answer' ? event.target.textContent = 'Hide answer' : event.target.textContent = 'Show answer';
 }
@@ -22,7 +22,7 @@ function toggleBookmark(event) {
   event.target.parentElement.parentElement.classList.toggle('bookmarked-question');  
   const activeFooterMenuElement = Array.from(footerMenuElements).find(element => element.classList.contains('item-active'));
   const activeFooterMenuElementAttribut = activeFooterMenuElement.getAttribute('data-js');
-  if (activeFooterMenuElementAttribut==='bookmarks') event.target.parentElement.parentElement.classList.add('hidden');
+  if (activeFooterMenuElementAttribut==='bookmarks') event.target.parentElement.parentElement.classList.add('hidden-question');
 }
 
 
@@ -51,16 +51,16 @@ function changePageContent(event) {
         sectionIndexElement.classList.remove('hidden');
         pageHeaderElement.textContent = 'Quizzly';
         sectionIndexElement.querySelectorAll('.question-card').forEach(element => {
-            element.classList.remove('hidden');
+            element.classList.remove('hidden-question');
         })
     }
     if (eventTargetAttribut==='bookmarks') {
         sectionIndexElement.classList.remove('hidden');
         pageHeaderElement.textContent = 'Bookmarks';
         sectionIndexElement.querySelectorAll('.question-card').forEach(element => {
-            element.classList.add('hidden');
+            element.classList.add('hidden-question');
             if (element.classList.contains('bookmarked-question')) {
-                element.classList.remove('hidden');
+                element.classList.remove('hidden-question');
             }
         })
 

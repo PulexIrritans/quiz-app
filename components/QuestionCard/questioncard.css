@@ -34,3 +34,7 @@
   color: whitesmoke;
   fill: whitesmoke;
 }
+
+.hidden-question {
+  display: none;
+}
