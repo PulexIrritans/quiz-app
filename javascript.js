@@ -55,18 +55,21 @@ footerMenuElements.forEach((item, index) => {
   const allSectionElements = document.querySelectorAll('section');
   const pageHeaderElement = document.querySelector('.quiz-header-h1');
 
+  //// Sets highlighting of active menu element
   item.addEventListener('click', () => {
     footerMenuElements.forEach(element => {
       element.classList.remove('item-active');
     });
     item.classList.add('item-active');
+    
+  //// Sets correct headline for page content based on menu selection
+  if (index === 0) pageHeaderElement.textContent = 'Quizzly';
+  if (index === 1) pageHeaderElement.textContent = 'Bookmarks';
+  if (index === 2) pageHeaderElement.textContent = 'Create';
+  if (index === 3) pageHeaderElement.textContent = 'Profile';
 
-    if (index === 0) pageHeaderElement.textContent = 'Quizzly';
-    if (index === 1) pageHeaderElement.textContent = 'Bookmarks';
-    if (index === 2) pageHeaderElement.textContent = 'Create';
-    if (index === 3) pageHeaderElement.textContent = 'Profile';
-
-    allSectionElements.forEach(element => {
+  //// Display correct page content based on menu selection
+  allSectionElements.forEach(element => {
       element.classList.add('hidden');
     });
     if (index === 2 || index === 3)
